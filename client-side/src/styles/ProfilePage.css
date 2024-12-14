@@ -1,0 +1,20 @@
+  .profile-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  ul {
+    padding-left: 0;
+  }
+  
+  ul li a {
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  ul li a:hover {
+    color: #ff5722; /* Warna hover */
+    text-decoration: underline;
+  }
+  

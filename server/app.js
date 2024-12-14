@@ -3,6 +3,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+const path = require("path");
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'))); // Serving images from 'uploads' folder
 
 // Import routes
 const userRoutes = require('./routes/userRoutes');

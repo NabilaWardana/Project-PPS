@@ -30,8 +30,21 @@ exports.addProduct = (data, callback) => {
         INSERT INTO products (nama_produk, harga, deskripsi, stock, size, gambar, category_id, created_at, updated_at)
         VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())
     `;
-    db.query(sql, [data.nama_produk, data.harga, data.deskripsi, data.stock, data.size, data.gambar, data.category_id], callback);
+    db.query(
+        sql,
+        [
+            data.nama_produk,
+            data.harga,
+            data.deskripsi,
+            data.stock,
+            data.size,
+            data.gambar,
+            data.category_id,
+        ],
+        callback
+    );
 };
+
 
 // Mengupdate produk berdasarkan ID (Menggunakan PATCH)
 exports.updateProductById = (productId, updatedData, callback) => {

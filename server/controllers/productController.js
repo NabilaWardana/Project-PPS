@@ -30,12 +30,17 @@ exports.getProductById = (req, res) => {
 exports.addProduct = (req, res) => {
     const { nama_produk, harga, deskripsi, stock, size, gambar, category_id } = req.body;
 
-    // Validasi input
-    if (!nama_produk || !harga || !deskripsi || !stock || !size || !gambar || !category_id) {
-        return res.status(400).json({ message: 'All fields are required' });
-    }
+    // Jika ada field kosong, isi dengan null
+    const newProduct = {
+        nama_produk: nama_produk || null,
+        harga: harga || null,
+        deskripsi: deskripsi || null,
+        stock: stock || null,
+        size: size || null,
+        gambar: gambar || null,
+        category_id: category_id || null,
+    };
 
-    const newProduct = { nama_produk, harga, deskripsi, stock, size, gambar, category_id };
     productModel.addProduct(newProduct, (err, result) => {
         if (err) {
             return res.status(500).json({ error: err.message });
@@ -43,6 +48,7 @@ exports.addProduct = (req, res) => {
         res.status(201).json({ success: true, message: 'Product added successfully', data: result });
     });
 };
+
 
 // Mengupdate produk berdasarkan ID (menggunakan PATCH)
 exports.updateProduct = (req, res) => {

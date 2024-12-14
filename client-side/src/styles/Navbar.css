@@ -1,0 +1,58 @@
+/* Styling untuk Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* Pastikan logo dan menu ter-align secara vertikal */
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styling untuk Menu di Sebelah Kanan */
+.navbar .nav {
+  display: flex;
+  align-items: center;  /* Mengatur menu agar ter-align secara vertikal */
+  justify-content: flex-end;  /* Pastikan menu berada di sisi kanan */
+}
+
+.navbar .nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;  /* Pastikan elemen-elemen di dalam menu ter-align secara vertikal */
+  padding: 0;  /* Menghindari padding yang menyebabkan jarak tak diinginkan */
+  margin: 0;   /* Menghindari margin yang menyebabkan jarak tak diinginkan */
+}
+
+.navbar .nav ul li {
+  list-style: none;
+}
+
+.navbar .nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.navbar .nav ul li .order-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar .nav ul li .order-btn:hover {
+  background-color: #218838;
+}
+
+.navbar .nav ul li .profile-link {
+  color: #000;
+}
+
+.navbar .nav ul li .profile-link:hover {
+  color: #007bff;
+}

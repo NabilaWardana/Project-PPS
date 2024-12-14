@@ -1,0 +1,60 @@
+/* Styling untuk Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa; /* Warna latar belakang navbar */
+  }
+  header.navbar{
+      padding: 10px 20px;
+  }
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .nav ul {
+    display: flex;
+    gap: 20px; /* Memberikan jarak antar item */
+    align-items: center;
+  }
+  
+  .navbar .nav ul li {
+    display: inline;
+  }
+  
+  .navbar .nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .navbar .nav ul li a:hover {
+    color: #007bff; /* Warna saat hover */
+  }
+  
+  .navbar .nav ul li .order-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar .nav ul li .order-btn:hover {
+    background-color: #218838; /* Warna saat hover pada tombol */
+  }
+  
+  .navbar .nav ul li .profile-link {
+    color: #000;
+  }
+  
+  .navbar .nav ul li .profile-link:hover {
+    color: #007bff; /* Warna saat hover pada link profil */
+  }
+  
+  /* Mengatur menu untuk berada di kanan */
+  .navbar .nav {
+    margin-left: auto; /* Ini mendorong menu ke kanan */
+  }
+  
